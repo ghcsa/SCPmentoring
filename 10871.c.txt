@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int i,x,y,n,str=0,num[10000]={0};
+    scanf("%d %d", &n, &x);
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%d", &y);
+
+        if(y<x)
+        {
+            num[str]=y;
+            str++;
+        }
+        else{
+
+        }
+    }
+    for(i=0;i<str;i++)
+    {
+        printf("%d ", num[i]);
+    }
+
+    return 0;
+}
