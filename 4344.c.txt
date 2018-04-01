@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int tc,n,i,j,k,num[1001]={0};
+
+    scanf("%d", &tc);//testcase c를입력.
+
+	for(i=0;i<tc;i++)
+	{
+        int sum=0,cnt=0;
+        double avg=0.0;
+        scanf("%d", &n); //testcase 학생수를정한다.
+
+        for(j=0;j<n;j++)
+        {
+            scanf("%d", &num[j]); // 학생의 점수입력.
+              sum+=num[j]; //평균계산을위해총점수계산
+        }
+        avg=(double)sum/(double)n; // 반평균
+
+        for(k=0;k<n;k++)
+            {
+                if(avg<num[k]) // 학생의점수가 평균을넘을때실행
+                cnt++;
+            }
+            avg=(double)cnt/(double)n; // 평균을넘는 학생의 비율
+            printf("%.3lf%\n", avg*100); //소수점 세쨰짜리까지출력
+
+	}
+
+}
